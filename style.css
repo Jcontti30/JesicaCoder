@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: repeat (4, auto);
+}
+
+.Menu {
+  background-color: cadetblue;
+  color: white;
+}
+
+.navbaritem {
+  text-decoration: none;
+  color: white;
+}
+.itemmenu {
+  list-style: none;
+}
+
+.contenedor .sobre mi {
+  grid-column: span 2;
+}
+
+.contenedor .sidebar {
+  grid-column: 3 / 4;
+  background: coral;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: span 2;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+  background: cadetblue;
+  color: white;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .footer {
+  background: black;
+  color: white;
+  grid-column: span 3;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor .sobre mi {
+    grid-column: 1/ -1;
+  }
+  .contenedor,
+  .catering {
+    grid-column: 1/ -1;
+  }
+  .contenedor .sidebar {
+    grid-column: 1/ -1;
+  }
+
+  .contenedor .widget-1 {
+    grid-column: span 2;
+  }
+}
+
+/* catering*/
+
+.contenedor .catering {
+  grid-column: span 2;
+}
